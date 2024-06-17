@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews - Historical Monuments in India</title>
+   
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        .o {
+            position: relative;
+            left: -33px;
+            background-color: green;
+            top: 0px;
+            height: 50px;
+        }
+        .z {
+            position: relative;
+            left: 4px;
+            background-color: green;
+            top: 393px;
+            height: 40px;
+            width: 30px;
+            z-index: 10;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5c5cb1;
+        }
+        .review-box {
+            background-color: #f9f9f9; 
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .review-box::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            background: linear-gradient(45deg, #ffafaf, #ffd5d5, #ffafaf);
+            border-radius: 10px;
+            z-index: -1;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        .review-heading {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 582px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ffafaf, #ffd5d5, #ffafaf);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .review {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .review-author {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <button class="z" onclick="goBack()"><</button>
+        <button class="o" onclick="goToHomePage()">Go to starting page</button>
+    </header>
+    
+    <h1 class="review-heading">Visitor Experiences</h1>
+
+    <div class="review-box">
+        <p class="review">"The Taj Mahal is truly a wonder of the world. The intricate marble work and the serene atmosphere left me in awe. It's a symbol of love that transcends time."</p>
+        <p class="review-author">- John Doe</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"Visiting the Qutub Minar was an unforgettable experience. The towering structure and its historical significance are truly impressive. I was amazed by the intricate carvings and the stories they tell."</p>
+        <p class="review-author">- Jane Smith</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"The Charminar in Hyderabad is a marvel of architecture. The bustling market around it adds to its charm. Climbing to the top gave me a panoramic view of the city, which was breathtaking."</p>
+        <p class="review-author">- David Johnson</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"The Red Fort in Delhi is a testament to India's rich history. Walking through its vast courtyards and seeing the grandeur of Mughal architecture was a captivating experience."</p>
+        <p class="review-author">- Sarah Lee</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"India Gate stands tall as a symbol of bravery and sacrifice. The eternal flame and the names of soldiers inscribed on the gate evoke a deep sense of patriotism and respect."</p>
+        <p class="review-author">- Michael Brown</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"The Lotus Temple's unique architecture and peaceful environment provided a tranquil escape from the city's hustle and bustle. It's a place for quiet reflection and admiration of its beauty."</p>
+        <p class="review-author">- Emily Wilson</p>
+    </div>
+</body>
+</html>

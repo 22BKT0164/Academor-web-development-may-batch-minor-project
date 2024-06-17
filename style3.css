@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+option {
+    color:black;
+    background-color: white;
+}
+
+option:hover {
+    color:white;
+    background-color: blue;
+}
+
+.form-container {
+    position: relative;
+    width: 876px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #060c21;
+    animation: glow-border 2s infinite alternate;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #2ecc71;
+    margin: 50px;
+    padding: 20px;
+}
+
+@keyframes glow-border {
+    0% {
+        box-shadow: 0 0 20px #2ecc71;
+    }
+    50% {
+        box-shadow: 0 0 40px #2ecc71;
+    }
+    100% {
+        box-shadow: 0 0 20px #2ecc71;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: solid 2px #3498db;
+}
+
+.input-container {
+    width: 80%;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 405px;
+  }
+
+.form-field label {
+    width: 150px;
+    color: #fff;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="password"],
+.form-field select,
+.form-field textarea {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #3298db;
+    border-radius: 10px;
+    background: none;
+    color: #fff;
+    outline: none;
+    transition: 0.35s;
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="email"]:focus,
+.form-field input[type="password"]:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #2ecc71;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 14px 40px;
+    border: 2px solid #2ecc71;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.35s;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #2ecc71;
+}
+
+.buttons button:hover {
+    background: #28b463;
+    animation: glow-button 1s infinite alternate;
+}
+
+@keyframes glow-button {
+    from {
+        box-shadow: 0 0 10px #2ecc71;
+    }
+    to {
+        box-shadow: 0 0 20px #2ecc71;
+    }
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+    color: #2ecc71;
+    position: fixed;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    animation: glow-text 2s infinite alternate;
+}

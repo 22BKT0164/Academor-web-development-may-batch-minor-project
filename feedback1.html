@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+.z {
+  position: relative;
+  left: -583px;
+  background-color: green;
+  top: 362px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+.o {
+  position: relative;
+  left: -621px;
+  background-color: green;
+  top: -6px;
+  height: 50px;
+}
+    </style>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+    
+            function goToHomePage() {
+                window.location.href = 'homepage.html';
+            }
+        </script>
+</head>
+<body>
+    <header>
+        <button class="z" onclick="goBack()"><</button>
+            <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+        Feedback Form</header>
+    <div class="form-container">
+        <h1><img src="logo.png" alt="Logo"></h1>
+        <form id="feedbackForm">
+            <div class="input-container">
+                <div class="form-field">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-field">
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback" required></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" id="rateExperienceBtn">Rate Your Experience</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var rateExperienceBtn = document.getElementById("rateExperienceBtn");
+            var feedbackForm = document.getElementById("feedbackForm");
+            var fullnameInput = document.getElementById("fullname");
+
+            rateExperienceBtn.addEventListener("click", function() {
+             
+                if (feedbackForm.checkValidity()) {
+                   
+                    var fullname = fullnameInput.value.trim();
+                    if (fullname.length < 5 || fullname.length > 13 || /\d/.test(fullname)) {
+                        alert("Please enter a valid name (5-13 characters, alphabets only).");
+                        return;
+                    }
+
+                    
+                    window.location.href = "feedback.html";
+                } else {
+                    
+                    alert("Please fill in all fields before rating your experience.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

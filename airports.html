@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Airports to Historical Monuments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .monument-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #f7f7f7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .monument-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .monument-card img {
+            border-radius: 10px;
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .monument-info {
+            flex-grow: 1;
+        }
+        .monument-info h3 {
+            margin-top: 0;
+            color: #ff6f61;
+        }
+        .monument-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .z {
+            position: relative;
+  left: 50px;
+  background-color: green;
+  top: 9px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+.o {
+    position: relative;
+  left: 1351px;
+  background-color: green;
+  top: 12px;
+  height: 50px;
+}
+    </style>
+     <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Nearest Airports to Historical Monuments</h1>
+        <p>Plan your trip with ease by finding the nearest airports to your favorite historical sites in India.</p>
+    </header>
+    <button class="z" onclick="goBack()"><</button>
+    <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+    <div class="container">
+        
+        
+        <div class="monument-card">
+            <img src="images/taj-mahal.jpg" alt="Taj Mahal">
+            <div class="monument-info">
+                <h3>Taj Mahal</h3>
+                <p><strong>Location:</strong> Agra, Uttar Pradesh</p>
+                <p><strong>Nearest Airport:</strong> Agra Airport (AGR)</p>
+                <p><strong>Distance:</strong> 13 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses, rental cars</p>
+                <p><strong>Travel Tips:</strong> Best visited during the cooler months from October to March.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/lotus-temple.jpg" alt="Lotus Temple">
+            <div class="monument-info">
+                <h3>Lotus Temple</h3>
+                <p><strong>Location:</strong> Delhi</p>
+                <p><strong>Nearest Airport:</strong> Indira Gandhi International Airport (DEL)</p>
+                <p><strong>Distance:</strong> 20 km</p>
+                <p><strong>Transportation:</strong> Metro, taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Visit early in the morning to avoid crowds.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/qutub-minar.jpg" alt="Qutub Minar">
+            <div class="monument-info">
+                <h3>Qutub Minar</h3>
+                <p><strong>Location:</strong> Delhi</p>
+                <p><strong>Nearest Airport:</strong> Indira Gandhi International Airport (DEL)</p>
+                <p><strong>Distance:</strong> 13 km</p>
+                <p><strong>Transportation:</strong> Metro, taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Combine with a visit to the nearby Mehrauli Archaeological Park.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/india-gate.jpg" alt="India Gate">
+            <div class="monument-info">
+                <h3>India Gate</h3>
+                <p><strong>Location:</strong> Delhi</p>
+                <p><strong>Nearest Airport:</strong> Indira Gandhi International Airport (DEL)</p>
+                <p><strong>Distance:</strong> 14 km</p>
+                <p><strong>Transportation:</strong> Metro, taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Visit during the evening for a beautiful light display.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/charminar.jpg" alt="Charminar">
+            <div class="monument-info">
+                <h3>Charminar</h3>
+                <p><strong>Location:</strong> Hyderabad, Telangana</p>
+                <p><strong>Nearest Airport:</strong> Rajiv Gandhi International Airport (HYD)</p>
+                <p><strong>Distance:</strong> 20 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Explore the nearby Laad Bazaar for shopping.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/mysore-palace.jpg" alt="Mysore Palace">
+            <div class="monument-info">
+                <h3>Mysore Palace</h3>
+                <p><strong>Location:</strong> Mysore, Karnataka</p>
+                <p><strong>Nearest Airport:</strong> Mysore Airport (MYQ)</p>
+                <p><strong>Distance:</strong> 10 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Attend the evening light and sound show.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/ajanta-caves.jpg" alt="Ajanta Caves">
+            <div class="monument-info">
+                <h3>Ajanta Caves</h3>
+                <p><strong>Location:</strong> Aurangabad, Maharashtra</p>
+                <p><strong>Nearest Airport:</strong> Aurangabad Airport (IXU)</p>
+                <p><strong>Distance:</strong> 100 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Best visited during the cooler months from October to March.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/victoria-memorial.jpg" alt="Victoria Memorial">
+            <div class="monument-info">
+                <h3>Victoria Memorial</h3>
+                <p><strong>Location:</strong> Kolkata, West Bengal</p>
+                <p><strong>Nearest Airport:</strong> Netaji Subhas Chandra Bose International Airport (CCU)</p>
+                <p><strong>Distance:</strong> 16 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses, metro</p>
+                <p><strong>Travel Tips:</strong> Visit the museum inside for historical exhibits.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/hawa-mahal.jpg" alt="Hawa Mahal">
+            <div class="monument-info">
+                <h3>Hawa Mahal</h3>
+                <p><strong>Location:</strong> Jaipur, Rajasthan</p>
+                <p><strong>Nearest Airport:</strong> Jaipur International Airport (JAI)</p>
+                <p><strong>Distance:</strong> 13 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Visit early in the morning to capture the best photographs.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/shanti-stupa.jpg" alt="Shanti Stupa">
+            <div class="monument-info">
+                <h3>Shanti Stupa</h3>
+                <p><strong>Location:</strong> Leh, Ladakh</p>
+                <p><strong>Nearest Airport:</strong> Kushok Bakula Rimpochee Airport (IXL)</p>
+                <p><strong>Distance:</strong> 5 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Visit during sunset for a mesmerizing view.</p>
+            </div>
+        </div>
+      
+
+        <div class="monument-card">
+            <img src="images/red-fort.jpg" alt="Red Fort">
+            <div class="monument-info">
+                <h3>Red Fort</h3>
+                <p><strong>Location:</strong> Delhi</p>
+                <p><strong>Nearest Airport:</strong> Indira Gandhi International Airport (DEL)</p>
+                <p><strong>Distance:</strong> 22 km</p>
+                <p><strong>Transportation:</strong> Metro, taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Explore the nearby Chandni Chowk market for shopping and street food.</p>
+            </div>
+        </div>
+
+        <div class="monument-card">
+            <img src="images/golden-temple.jpg" alt="Golden Temple">
+            <div class="monument-info">
+                <h3>Golden Temple</h3>
+                <p><strong>Location:</strong> Amritsar, Punjab</p>
+                <p><strong>Nearest Airport:</strong> Sri Guru Ram Dass Jee International Airport (ATQ)</p>
+                <p><strong>Distance:</strong> 13 km</p>
+                <p><strong>Transportation:</strong> Taxis, buses</p>
+                <p><strong>Travel Tips:</strong> Cover your head with a scarf or cloth as a sign of respect when visiting the temple.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 MVS Pragnya Bala. All rights reserved.</p>
+    </footer>
+</body>
+</html>

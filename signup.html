@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .im{
+            width:200px;height:47px;
+        }
+        .z {
+  position: relative;
+  left: -668px;
+  background-color: green;
+  top: 394px;
+  height: 40px;
+  width: 30px;
+}
+.o {
+  position: relative;
+  left: -710px;
+  background-color: green;
+  top: -8px;
+  height: 50px;
+}
+p{
+    position:relative;
+    top:-77px;
+}
+    </style>
+    <script>
+        function validateForm() {
+            var fullname = document.getElementById("fullname").value;
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var nationality = document.getElementById("nationality").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            if (!/^[a-zA-Z\s]{5,13}$/.test(fullname)) {
+                alert("Please enter a valid name (5-13 alphabets only.No numbers).");
+                return false;
+            }
+            if (!/^[a-zA-Z\s]{5,13}$/.test(username)) {
+                alert("Please enter a valid username (5-13 alphabets only.No numbers).");
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address for example abc@gmail.com");
+                return false;
+            }
+
+            if (!/^\d{2}[a-zA-Z\S]{4}$/.test(password)) {
+                alert("Please enter a valid password (6 characters i.e first two are numbers and next four are alphabets).");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            if (nationality === "") {
+                alert("Please select your nationality.");
+                return false;
+            }
+
+            if (!gender) {
+                alert("Please select your gender.");
+                return false;
+            }
+
+            if (hobbies.length === 0) {
+                alert("Please select at least one hobby.");
+                return false;
+            }
+
+          
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+            if (!allowedExtensions.exec(fileInput.value)) {
+                alert('Invalid file type. Only JPEG, JPG, and PNG files are allowed.');
+                fileInput.value = '';
+                return false;
+            }
+
+           
+
+            window.location.href = "signin.html";
+            return false;
+        }
+       
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToHomePage() {
+            window.location.href = "homepage.html"; 
+        }
+   
+    </script>
+</head>
+<body>
+    <header>
+       
+            <button class="z" onclick="goBack()"><</button>
+
+           
+       
+        <p>SIGN UP FORM</p></header>
+    <div class="form-container">
+        <form onsubmit="return validateForm()">
+            <h1><img src="logo.png" alt="Cosmic Scholar"></h1>
+            <div class="input-container">
+                <div class="form-field">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name(5-13 alphabets only.No numbers)" required>
+                </div>
+                <div class="form-field">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username(5-13 alphabets only.No numbers)" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email eg:abc@gmail.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password of length 6(first two digits and the next four are alphabets)" required>
+                </div>
+                <div class="form-field">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Reconfirm password" required>
+                </div>
+                <div class="form-field">
+                    <label for="nationality">Nationality:</label>
+                    <select id="nationality" name="nationality" required>
+                        <option value="" class="a" disabled required selected>Select your nationality</option>
+                        <option class="a" value="usa">United States</option>
+                        <option class="a" value="canada">Canada</option>
+                        <option class="a" value="uk">United Kingdom</option>
+                        <option class="a" value="india">India</option>
+                        <option class="a" value="japan">Japan</option>
+                        <option class="a" value="china">China</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <div class="form-field">
+                    <label>Hobbies:</label>
+                    <input style="margin-left:35px;" type="checkbox" id="reading" name="hobbies[]" value="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" id="traveling" name="hobbies[]" value="traveling">
+                    <label for="traveling">Traveling</label>
+                    <input type="checkbox" id="cooking" name="hobbies[]" value="cooking">
+                    <label for="cooking">Cooking</label>
+                    <input type="checkbox" id="other" name="hobbies[]" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <div class="form-field">
+                    <label for="fileInput">Profile Picture (JPEG, JPG, PNG only):</label>
+                    <input type="file" class="im" id="fileInput" name="fileInput" accept="image/*" required>
+                    
+                   
+                  
+                    
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <button style="color:white;background-color:#2ecc71;" type="submit" name="submit">SIGN UP</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+   
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: #060c21;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+            position: relative;
+  left: -271px;
+            margin:auto;
+        }
+
+        .section {
+            flex-basis: calc(33.33% - 20px); 
+            background: #060c21;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: glow-border 2s infinite alternate;
+            margin-left:30px;
+        }
+
+        @keyframes glow-border {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #2ecc71;
+            font-size: 30px; 
+        }
+        .h {
+  color: #2ecc71;
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  top: -240px;
+  left: 525px;
+  margin:auto;
+}
+
+        .info {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .info img {
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 18px; 
+        }
+        .z {
+  position: relative;
+  left: 0px;
+  background-color: green;
+  top: -25px;
+  height: 40px;
+  width: 30px;
+}
+.o {
+  position: relative;
+  left: -24px;
+  background-color: green;
+  top: -375px;
+  height: 50px;
+}
+
+    </style>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+    
+            function goToHomePage() {
+                window.location.href = 'homepage.html';
+            }
+        </script>
+</head>
+<body>
+    <button class="z" onclick="goBack()"><</button>
+            <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+    <div class="h" style="display:block;">GET IN TOUCH</div></br>
+<div class="container">
+    
+    <div class="section">
+        <img src="map.png" alt="Map Icon" class="circular-icon">
+        <h1>Our Location</h1>
+        <div class="info">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vellore,India</p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="phone.png" alt="Phone Icon" class="circular-icon">
+        <h1>Contact Number</h1>
+        <div class="info">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 9837368123</p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="mail.png" alt="Email Icon" class="circular-icon">
+        <h1>Email Address</h1>
+        <div class="info">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;astroworld@gmail.com</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

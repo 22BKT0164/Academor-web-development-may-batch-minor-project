@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Significance of Ancient Monuments in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #1e1e1e;
+            color: #fffa65;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(255, 250, 101, 0.5);
+            width: 100%;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 8px #fffa65;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .monument-circle {
+            background-color: #1e1e1e;
+            border: 5px solid #fffa65;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #fffa65;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+        }
+        .monument-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .monument-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #fffa65;
+            border-radius: 15px;
+        }
+        .monument-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fffa65;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .monument-circle:hover .monument-info {
+            opacity: 1;
+        }
+        .monument-info h3, .monument-info p {
+            margin: 5px;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #fffa65;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(255, 250, 101, 0.5);
+            position:relative;
+            top:30px;
+
+        }
+        
+
+.hover{
+    background-color: #333;
+  color: #fffa65;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -58px;
+  text-align: center;
+  margin-left: -30px;
+  font-size: 30px;
+}
+
+.z {
+    position: relative;
+  left: -676px;
+  background-color: green;
+  top: 55px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+.o {
+    position: relative;
+  left: 670px;
+  background-color: green;
+  top: 12px;
+  height: 50px;
+}
+
+
+
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cultural Significance of Ancient Monuments in India</h1>
+    </header>
+    <button class="z" onclick="goBack()"><</button>
+    <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+    <p class="hover">HOVER OVER EACH IMAGE TO READ ABOUT ITS CULTURAL SIGNIFICANCE</p>
+    <div class="container">
+        <div class="monument-circle">
+            <img src="tajmahal.jpg" alt="Taj Mahal">
+            <div class="monument-info">
+                <h3>Taj Mahal</h3>
+                <p>Symbol of love, the Taj Mahal is a UNESCO World Heritage Site and one of the most iconic structures in the world.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="q.jpg" alt="Qutub Minar">
+            <div class="monument-info">
+                <h3>Qutub Minar</h3>
+                <p>A UNESCO World Heritage Site, Qutub Minar is a victory tower showcasing the Indo-Islamic architectural brilliance.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="charminar1.jpg" alt="Charminar">
+            <div class="monument-info">
+                <h3>Charminar</h3>
+                <p>The Charminar, a symbol of Hyderabad, is known for its stunning Islamic architecture and historical significance.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="redfort1.jpg" alt="Red Fort">
+            <div class="monument-info">
+                <h3>Red Fort</h3>
+                <p>The Red Fort is a historic fort in Delhi that served as the main residence of the Mughal emperors.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="lotus.jpg" alt="Lotus Temple">
+            <div class="monument-info">
+                <h3>Lotus Temple</h3>
+                <p>The Lotus Temple is a Bahá'í House of Worship, notable for its flower-like shape and open to all religions.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="indiagate.jpg" alt="India Gate">
+            <div class="monument-info">
+                <h3>India Gate</h3>
+                <p>India Gate is a war memorial in New Delhi, commemorating the soldiers who died in World War I.</p>
+            </div>
+        </div>
+       
+        <div class="monument-circle">
+            <img src="konarktemple1.jpg" alt="Konark Sun Temple">
+            <div class="monument-info">
+                <h3>Konark Sun Temple</h3>
+                <p>The Konark Sun Temple is a 13th-century temple dedicated to the sun god, known for its chariot-like design.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="sanchistupa1.jpg" alt="Sanchi Stupa">
+            <div class="monument-info">
+                <h3>Sanchi Stupa</h3>
+                <p>The Sanchi Stupa is one of the oldest stone structures in India, built by Emperor Ashoka in the 3rd century BCE.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="mysorepalace.jpg" alt="Mysore Palace">
+            <div class="monument-info">
+                <h3>Mysore Palace</h3>
+                <p>Mysore Palace is a historical palace in Karnataka, famous for its Indo-Saracenic architecture and grandeur.</p>
+            </div>
+        </div>
+        <div class="monument-circle">
+            <img src="goldentemple1.jpg" alt="Golden Temple">
+            <div class="monument-info">
+                <h3>Golden Temple</h3>
+                <p>The Golden Temple in Amritsar is the holiest gurdwara of Sikhism, known for its golden dome and serene surroundings.</p>
+            </div>
+        </div>
+       
+    </div>
+    <footer>
+        <p>&copy; 2024 MVS Pragnya Bala. All rights reserved.</p>
+    </footer>
+</body>
+</html>

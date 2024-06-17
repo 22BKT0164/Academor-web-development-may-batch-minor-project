@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function redirectToAnotherPage() {
+          
+          document.location.href = 'https://en.wikipedia.org/wiki/Taj_Mahal';
+        }
+        function r(){
+            document.location.href ='https://en.wikipedia.org/wiki/India_Gate';
+
+        }
+        function a(){
+            document.location.href ='https://en.wikipedia.org/wiki/Lotus_Temple';
+
+        }
+        function s(){
+            document.location.href ='https://en.wikipedia.org/wiki/Qutb_Minar';
+        }
+      </script>
+</head>
+<body>
+    
+   
+    <header>
+           
+           
+            <img src="logo.png" style="width: 200px; height: 150px;position:relative;right:20px;top:50px; ">
+        <nav>
+            <a href="explore.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="About.html">About</a>
+            
+            <a href="feedback1.html">Feedback</a>
+          
+        </nav>
+    </header>
+
+
+    <div class="carousel">
+     
+        <div class="list">
+            
+            
+
+            <div class="item">
+                <img src="image2.png">
+                <div class="content">
+                    <div class="author">LOTUS OF BAHAPUR</div>
+                    <div class="title">LOTUS TEMPLE</div>
+                    <div class="topic">LOTUS SHRINE</div>
+                    <div class="des">
+                        The Lotus Temple in Delhi, inaugurated in 1986, is a Bahá'í House of Worship renowned for its stunning flower-like architecture. Designed by Iranian architect Fariborz Sahba, this marble-clad structure attracts millions of visitors annually for its serene ambiance and universal message of unity and peace.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="a()">SEE MORE</button>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img  src="image3.jpg">
+                <div class="content">
+                    <div class="author">MUMTAZ MAHAL</div>
+                    <div class="title">TAJ MAHAL</div>
+                    <div class="topic">MONUMENT OF LOVE</div>
+                    <div class="des">
+                     
+                        The Taj Mahal, located in Agra, India, is a stunning white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal. Completed in 1653, it is renowned for its exquisite architectural beauty and intricate craftsmanship, symbolizing eternal love and one of the world's most admired monuments.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="redirectToAnotherPage()">SEE MORE</button>
+                        </div>
+
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="qtub minar wide angle.jpg">
+                <div class="content">
+                    <div class="author">ALAI MINAR</div>
+                    <div class="title">QUTUB MINAR</div>
+                    <div class="topic">DHRUV STAMBH</div>
+                    <div class="des">
+                        The Qutub Minar, located in Delhi, is the tallest brick minaret in the world, standing at a height of 73 meters. Built in the 12th century by Qutb-ud-din Aibak, it is a UNESCO World Heritage Site and a remarkable example of Indo-Islamic architecture, featuring intricate carvings and inscriptions.
+                    <div class="buttons">
+                        <button onclick="s()">SEE MORE</button>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image1.jpg">
+                <div class="content">
+                    <div class="author">VICTORY ARCH</div>
+                    <div class="title">INDIA GATE</div>
+                    <div class="topic">WAR MEMORIAL</div>
+                    <div class="des">
+                        India Gate, located in New Delhi, is a majestic war memorial built in 1931 to honor the soldiers of the British Indian Army who died in World War I and the Third Anglo-Afghan War. Designed by Sir Edwin Lutyens, this iconic arch stands 42 meters tall and serves as a symbol of national pride and remembrance.
+                    </div>
+                    <div class="buttons">
+                       
+                        <button onclick="r()">SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="thumbnail">
+            
+            
+            <div class="item">
+                <img src="image2.png">
+                <div class="content">
+                    <div class="title">
+                        LOTUS TEMPLE
+                    </div>
+                    <div class="description">
+                        LOTUS OF BAHAPUR
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image3.jpg">
+                <div class="content">
+                    <div class="title">
+                        TAJ MAHAL
+                    </div>
+                    <div class="description">
+                        MUMTAZ MAHAL
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="qtub minar wide angle.jpg">
+                <div class="content">
+                    <div class="title">
+                        QUTUB MINAR
+                    </div>
+                    <div class="description">
+                        ALAI MINAR
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image1.jpg">
+                <div class="content">
+                    <div class="title">
+                        INDIA GATE
+                    </div>
+                    <div class="description">
+                        VICTORY ARCH
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      
+
+        <div class="arrows">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+      
+        <div class="time"></div>
+    </div>
+
+    <script src="a.js"></script>
+</body>
+</html>

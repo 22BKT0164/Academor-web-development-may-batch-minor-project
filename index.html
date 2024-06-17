@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Places In India </title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta name="description"
+  content="Emabark on a cosmic adventure! Explore the wonders of our solar system ,from the brilliance of the sun to the dance of eclipses. Join us in this celestial odyssey and unravel the mysteries that make our cosmic neighbourhood truly mesmerizing.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      
+       background-image:url('india-dribble-800x600.gif');
+       background-size:100vw 100vh;
+      background-repeat: no-repeat;
+      font-size:29px;
+    }
+    .container {
+      margin-top: 400px;
+    }
+    .input-box {
+  margin-bottom: 38px;
+  width: 236px;
+  position: relative;
+  left: 606px;
+}
+.input-box input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 298px;
+  text-align: center;
+}
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    h1{
+      position: relative;
+      top: -338px;
+    }
+    input{
+      position: relative;
+      top: 50px;
+    }
+    button{
+      position: relative;
+  top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 style="color:yellow;">Explore the historical legacy of india !</h1>
+    <div class="input-box">
+      <input type="text" id="username" placeholder="Enter your name">
+    </div>
+    <button class="button" onclick="redirectToGreetingPage()">Continue</button>
+  </div>
+
+  <script>
+    function redirectToGreetingPage() {
+      var username = document.getElementById('username').value;
+      window.location.href = 'greeting.html?name=' + encodeURIComponent(username);
+    }
+  </script>
+
+</body>
+</html>

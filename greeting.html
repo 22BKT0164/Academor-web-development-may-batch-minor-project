@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Astroworld</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+    .greeting {
+      position: relative;
+      top: 30px;
+      font-size: 49px;
+      margin-bottom: 20px;
+      position: absolute;
+      
+      font-family: 'Comic Sans MS', cursive, sans-serif; 
+      color: #FFD700; 
+      animation: zoomIn 1.5s ease both, slideIn 0.5s ease 1.5s both; 
+      text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7); 
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-200%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .character {
+      position: relative;
+      animation: floatAnimation 3s infinite;
+    }
+    .im {
+      height: 400px;
+      width: 400px;
+      margin-top: 192px;
+    }
+    @keyframes floatAnimation {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+    .speech-bubble {
+      position: absolute;
+      top: 143px;
+      left: 112%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: auto;
+      background-color: #b66925;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 15px 15px 15px 0;
+      border-color: transparent #b66925 transparent transparent;
+    }
+    .button-container {
+      margin-top: 119px;
+    }
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 30px; 
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px; 
+      border-radius: 30px; 
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+      cursor: pointer; 
+      outline: none; 
+      border: none;
+      margin-left: 22px;
+    }
+    .button:hover {
+      background-color: #45a049;
+      transform: scale(1.05); 
+    }
+    
+   
+  </style>
+  <script>
+    function p(){document.location.href='signup.html';}
+    function m(){document.location.href='signin.html';}
+        
+  </script>
+</head>
+<body>
+
+  <div class="greeting" id="greetingText">
+  </div>
+  <div class="character">
+    <img class="im" src="guideimage.jpeg" alt="Animated Character">
+    <div class="speech-bubble">
+      <p>Let's blast off on an epic tour together. Please click on one of the buttons.</p>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="button " onclick="p()">Sign Up</button>
+    <button class="button " onclick="m()">Sign In</button>
+  </div>
+
+  <script>
+   
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('name');
+
+  
+    const greetingElement = document.getElementById('greetingText');
+    greetingElement.innerHTML = `Hi, ${username}! <br> Welcome to HistoricalVistasIndia where you are shown the historic beauty of India!`;
+     
+     document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', () => {
+       
+      });
+    });
+  </script>
+
+</body>
+</html>
